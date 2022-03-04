@@ -104,6 +104,4 @@ theme: frame
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: https://github.com/laiyenju/laiyenju.github.io.git
-  branch: gh-pages # 儲存庫分支
+  type: ""
