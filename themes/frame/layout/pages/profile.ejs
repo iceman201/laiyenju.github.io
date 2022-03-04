@@ -1,0 +1,22 @@
+<div class="profile">
+    <div class="profile-image" style="background-color: #F8F6F0;">
+        <!--放置作品集類型-->
+        <!-- <% if (theme.profile.image) {%>
+            <img src="<%= url_for(theme.profile.image)%>" alt="featured_image">
+        <% } %>   -->
+    </div>
+    <div class="post-content profile-content">
+        <div class="profile-title">
+            <%=theme.profile.title%>
+        </div>
+        <div class="profile-body" style="font-weight: 200;">
+            <%=theme.profile.body%>
+        </div>
+        <% Object.keys(theme.profile.links).forEach(key => { %>
+            <div class="profile-link">
+                <a href="<%= url_for(theme.profile.links[key])%>"><%=key%></a> 
+            </div>           
+        <% }); %>
+    </div>
+    
+</div>
