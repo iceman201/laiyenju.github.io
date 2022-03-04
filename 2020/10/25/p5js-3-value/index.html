@@ -17,7 +17,7 @@
 
 
 
-<title>Taiwan Jobs | YEN LAI</title>
+<title>p5.js - 變數與資料 | YEN LAI</title>
 
 
 
@@ -112,20 +112,14 @@
             
                 
                     <span class="post-tag">
-                        <a href="/tags/service-design/">
-                            service design
+                        <a href="/tags/p5-js/">
+                            p5.js
                         </a>
                     </span>    
                 
                     <span class="post-tag">
-                        <a href="/tags/prototype/">
-                            prototype
-                        </a>
-                    </span>    
-                
-                    <span class="post-tag">
-                        <a href="/tags/public-service/">
-                            public service
+                        <a href="/tags/creative-technology/">
+                            creative technology
                         </a>
                     </span>    
                            
@@ -134,12 +128,12 @@
         <div class="post-title">
             
             
-                Taiwan Jobs
+                p5.js - 變數與資料
             
             
         </div>
         <span class="post-date">
-            3月 4, 2022
+            10月 25, 2020
         </span>
     </div>
     <div class="post-img">
@@ -149,7 +143,38 @@
     </div>
 </div>
     <div class="post-content">
-    
+    <p>目標：學習如何產生更複雜、有規律的連續圖示。</p>
+<h2 id="為什麼要使用變數？"><a href="#為什麼要使用變數？" class="headerlink" title="為什麼要使用變數？"></a>為什麼要使用變數？</h2><ol>
+<li>減少重複</li>
+<li>暫存手邊資料</li>
+<li>為複雜運算解構概念</li>
+<li>留下上一刻的狀態</li>
+</ol>
+<h2 id="數字的操作"><a href="#數字的操作" class="headerlink" title="數字的操作"></a>數字的操作</h2><blockquote>
+<p>想法：<br>因為 draw function 本身就會一直循環，所以製作有序、不斷生成的圖像時，可以善用這點。</p>
+</blockquote>
+<ul>
+<li><code>%</code> 取餘數，可以處理間隔式規律，例如：每隔三個方塊，就要有一個方塊是白色的。</li>
+<li><code>abs</code> 取絕對值</li>
+</ul>
+<h2 id="轉換數值範圍的應用"><a href="#轉換數值範圍的應用" class="headerlink" title="轉換數值範圍的應用"></a>轉換數值範圍的應用</h2><ul>
+<li>map&#x2F; constrain，map 是把一個數字從舊範圍對應到新範圍。</li>
+<li>lerp 逼近，會有種逐漸靠近的感覺</li>
+<li>min&#x2F;max</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//讓滑鼠 x 軸位置的範圍是在 0, 255 之間</span></span><br><span class="line"><span class="keyword">var</span> colorR = <span class="title function_">map</span>(mouseX, <span class="number">0</span>, width, <span class="number">0</span>, <span class="number">255</span>, <span class="literal">true</span>); </span><br><span class="line"></span><br><span class="line"><span class="comment">//map(mouseX, 實際最小值, 實際最大值, 要對應的最小值, 要對應的最大值, [true])，true 讓最小值與最大值是乾淨的</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Questions"><a href="#Questions" class="headerlink" title="Questions"></a>Questions</h2><ol>
+<li>使用 var 跟 let 在 p5.js 的使用有差別嗎？</li>
+<li>第二個範例的 brightness 放在 function 外面會更清楚、更好管理嗎？為何有時定義變數在 function 外，有時在裡面？</li>
+</ol>
+<p>自己的想法：<br><code>map()</code> 如果寫在 function 外，會被系統報錯，要求寫在 setup() 內，當改寫到 setup() 內，卻沒有畫面。如果跟老師一樣，寫在 draw 才會出現理想效果。</p>
+<h2 id="作業"><a href="#作業" class="headerlink" title="作業"></a>作業</h2><ol>
+<li>畫個蝸牛型，由內慢慢畫元到外，且顏色會變</li>
+<li>時鐘表面（番茄時鐘）</li>
+<li>嘗試物理模擬</li>
+</ol>
+<iframe src="https://editor.p5js.org/laiyenju/embed/bDppjKFI3" height="500" width="700" frameborder="0"></iframe>
 </div> 
 
 <script>
@@ -160,12 +185,17 @@
     <nav class="post-nav">
         <div class="prev-item">
            
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/2022/03/04/works-taiwan-jobs/">Prev</a>
+                </div>
+            
         </div>
         <div class="next-item">
             
                 <div class="icon arrow-right"></div>
                 <div class="post-link">
-                  <a href="/2020/10/25/p5js-3-value/">Next</a>  
+                  <a href="/2020/10/18/p5js-2-geometry/">Next</a>  
                 </div>  
             
         </div>
