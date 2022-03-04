@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-tw,en,default">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@200;400;700&family=Poppins:ital,wght@0,100;0,200;0,500;0,700;1,300&display=swap" rel="stylesheet">  
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Yen Lai">
+
+
+
+
+
+
+
+<title>p5.js - 基本樣式 | YEN LAI</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/frame.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 6.0.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            <img class="logo-img" src="/favicon.png" alt="logo_image">
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Notes</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/p5-js/">
+                            p5.js
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/creative-technology/">
+                            creative technology
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                p5.js - 基本樣式
+            
+            
+        </div>
+        <span class="post-date">
+            10月 11, 2020
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <p>學習 p5.js 的第一次作業</p>
+<ol>
+<li>setup 與 draw 有什麼不一樣，個別執行的時機跟作用是什麼？</li>
+<li>要如何改變視窗的大小呢？</li>
+<li>background() 裡面可以使用哪些參數，試著從文件中找找看</li>
+<li>希望有按下滑鼠的時候，才根據滑鼠的位置改變顏色要怎麼做到呢？</li>
+<li>如果我想要改變先前軌跡變淡的速度，要怎麼做呢？</li>
+<li>從 openprocessing, pinterest, 或是 codepen 之類的平台找幾個覺得有趣的作品，並試著分析ㄧ下他是怎麼做的吧🤩</li>
+</ol>
+<h2 id="1-setup-與-draw-有什麼不一樣，個別執行的時機跟作用是什麼？"><a href="#1-setup-與-draw-有什麼不一樣，個別執行的時機跟作用是什麼？" class="headerlink" title="1. setup 與 draw 有什麼不一樣，個別執行的時機跟作用是什麼？"></a>1. setup 與 draw 有什麼不一樣，個別執行的時機跟作用是什麼？</h2><p>setup 比較像是初始值，通常會在這裡設定畫布尺寸、畫布的背景顏色等，程式會先執行 setup 的設定；程式執行完 setup 後，就會循環執行 draw 的內容，因此我們能將希望動態呈現的物件放在 draw 內，產生動畫效果。</p>
+<h2 id="2-要如何改變視窗的大小呢？"><a href="#2-要如何改變視窗的大小呢？" class="headerlink" title="2. 要如何改變視窗的大小呢？"></a>2. 要如何改變視窗的大小呢？</h2><p>改變 setup 中的 <code>createCanvas(w, h）</code> 數值，w 數值代表寬度，h 數值代表高度。</p>
+<p><img src="https://i.imgur.com/kHsYep9.jpg"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//w=500, h=500</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span><br><span class="line">	<span class="title function_">createCanvas</span>(<span class="number">500</span>, <span class="number">500</span>);</span><br><span class="line">	<span class="title function_">background</span>(<span class="number">255</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">draw</span>(<span class="params"></span>) &#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// w=800. h=500</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span><br><span class="line">	<span class="title function_">createCanvas</span>(<span class="number">800</span>, <span class="number">500</span>);</span><br><span class="line">	<span class="title function_">background</span>(<span class="number">255</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">draw</span>(<span class="params"></span>) &#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="3-background-裡面可以使用哪些參數，試著從文件中找找看"><a href="#3-background-裡面可以使用哪些參數，試著從文件中找找看" class="headerlink" title="3. background() 裡面可以使用哪些參數，試著從文件中找找看"></a>3. background() 裡面可以使用哪些參數，試著從文件中找找看</h2><ul>
+<li>background(color)</li>
+<li>background(colorstring, [a])</li>
+<li>background(gray, [a])</li>
+<li>background(v1, v2, v3, [a])</li>
+<li>background(values)</li>
+<li>background(image, [a])</li>
+</ul>
+<blockquote>
+<ul>
+<li>[a] 代表透明度</li>
+<li>background(image, [a]) 要搭配 <code>loadImage()</code> 或 <code>createImage()</code> 使用</li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// color value and object</span></span><br><span class="line"><span class="title function_">background</span>(<span class="number">51</span>);  <span class="comment">// grayscale</span></span><br><span class="line"><span class="title function_">background</span>(<span class="number">255</span>, <span class="number">204</span>, <span class="number">0</span>);  <span class="comment">// RGB</span></span><br><span class="line"><span class="title function_">background</span>(<span class="title function_">color</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>));  <span class="comment">// color object</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// HSB 數值</span></span><br><span class="line"><span class="title function_">colorMode</span>(<span class="variable constant_">HSB</span>);</span><br><span class="line"><span class="title function_">background</span>(<span class="number">255</span>, <span class="number">204</span>, <span class="number">100</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// colorstring</span></span><br><span class="line"><span class="title function_">background</span>(<span class="string">&#x27;red&#x27;</span>);  <span class="comment">// color-name</span></span><br><span class="line"><span class="title function_">background</span>(<span class="string">&#x27;#fae&#x27;</span>);  <span class="comment">// 3-digit Hex</span></span><br><span class="line"><span class="title function_">background</span>(<span class="string">&#x27;#222222&#x27;</span>);  <span class="comment">// 6-digit Hex</span></span><br><span class="line"><span class="title function_">background</span>(<span class="string">&#x27;rgb(0,255,0)&#x27;</span>);  <span class="comment">// RGB</span></span><br><span class="line"><span class="title function_">background</span>(<span class="string">&#x27;rgba(0,255,0, 0.25)&#x27;</span>);  <span class="comment">// RGB with opacity</span></span><br><span class="line"><span class="title function_">background</span>(<span class="string">&#x27;rgb(100%,0%,10%)&#x27;</span>);  <span class="comment">// RGB by percentage</span></span><br><span class="line"><span class="title function_">background</span>(<span class="string">&#x27;rgba(100%,0%,100%,0.5)&#x27;</span>);  <span class="comment">// RGB with opacity by percentage</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="4-希望有按下滑鼠的時候，才根據滑鼠的位置改變顏色要怎麼做到呢？"><a href="#4-希望有按下滑鼠的時候，才根據滑鼠的位置改變顏色要怎麼做到呢？" class="headerlink" title="4. 希望有按下滑鼠的時候，才根據滑鼠的位置改變顏色要怎麼做到呢？"></a>4. 希望有按下滑鼠的時候，才根據滑鼠的位置改變顏色要怎麼做到呢？</h2><iframe src="https://www.openprocessing.org/sketch/877927/embed/" width="700" height="700"></iframe>
+
+
+<h2 id="5-如果我想要改變先前軌跡變淡的速度，要怎麼做呢？"><a href="#5-如果我想要改變先前軌跡變淡的速度，要怎麼做呢？" class="headerlink" title="5. 如果我想要改變先前軌跡變淡的速度，要怎麼做呢？"></a>5. 如果我想要改變先前軌跡變淡的速度，要怎麼做呢？</h2><p>改變背景透明度，越透明則軌跡變淡的速度越慢，越不透明則軌跡變淡的速度越快。</p>
+<iframe src="https://www.openprocessing.org/sketch/877944/embed/" width="700" height="700"></iframe>
+
+
+<h2 id="6-從-openprocessing-pinterest-或是-codepen-之類的平台找幾個覺得有趣的作品，並試著分析ㄧ下他是怎麼做的吧"><a href="#6-從-openprocessing-pinterest-或是-codepen-之類的平台找幾個覺得有趣的作品，並試著分析ㄧ下他是怎麼做的吧" class="headerlink" title="6. 從 openprocessing, pinterest, 或是 codepen 之類的平台找幾個覺得有趣的作品，並試著分析ㄧ下他是怎麼做的吧"></a>6. 從 openprocessing, pinterest, 或是 codepen 之類的平台找幾個覺得有趣的作品，並試著分析ㄧ下他是怎麼做的吧</h2><p>在 OpenProcessing 找到 <a target="_blank" rel="noopener" href="https://www.openprocessing.org/sketch/831208">Type_ABCDe Studios</a> 作品，覺得像是廣告看板，有點可愛。裡面運用了以下元素，搭配 for 迴圈讓字體重複出現，並在固定的範圍內移動。</p>
+<ul>
+<li>製作立面方塊：<code>box()</code></li>
+<li>在立體面放入圖樣：<code>createGraphics()</code></li>
+<li>旋轉：<code>rotateX()</code>、<code>rotateY()</code></li>
+<li>使用字體：載入字體檔<code>loadFont()</code>、調整字體的<code>text()</code>與<code>textSize()</code>、渲染字體<code>texture()</code></li>
+</ul>
+<p>因為原作品寫 for 迴圈的方式用了 <code>sin()</code>，這部分的寫法我還沒搞懂，在嘗試製作後，改讓旋轉的立面方塊內文字跟著設定好範圍的 X 軸與 Y 軸隨機變動位置與大小，成為喧鬧的方塊XD</p>
+<iframe src="https://www.openprocessing.org/sketch/877949/embed/" width="700" height="700"></iframe>
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/2022/03/05/works-taiwan-jobs/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+                © 2022 - Yen Lai
+                <br>
+            
+            
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+  </body>
+</html>
