@@ -74,3 +74,8 @@ disqus: # disqus setup guide: https://help.disqus.com/en/articles/1717056-publis
   enable: false
   disqus_url: # your diqsuq url or shortname
   language: 'en'
+
+
+# footnotes-plugin
+plugins:
+  - hexo-footnotes
