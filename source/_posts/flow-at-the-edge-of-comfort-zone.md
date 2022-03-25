@@ -6,8 +6,6 @@ tag:
 - [diary]
 ---
 
-![](https://images.squarespace-cdn.com/content/v1/54ee5392e4b094722872ecc1/1510805758697-34UGS59BX0470O3YYXFI/how-to-be-happy-6-find-flow.jpg?format=1000w)
-
 收到 Nguyen Le 寫的電子報（完全忘記當初在哪訂的），當初吸引我訂閱電子報的，是他分享在社群的[設計資源庫](https://www.notion.so/newincreative/The-Vault-Nguyen-s-Design-Resource-stash-dd710673638a4c16a571574ff72d05f9)，不僅定期更新，內容還非常豐富且分類詳盡，可以直接當作個人的學習路線圖。
 
 他分享正在讀的書《心流》，裡面這張圖有點意思
